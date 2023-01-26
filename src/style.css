@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    transition: all ease 400ms;
+}
+
+/* GIFSGALLERY*/
+.grid-wrapper {
+    width: auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax( 150px, 1fr ));
+}
+.grid-wrapper > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.grid-wrapper > li > img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+.grid-wrapper .hover{
+    width: 0%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.grid-wrapper li:hover .hover{
+    width: 100%;
+}
+
+/* LOADING-CIRCLE */
+.loading-position{
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+}
+
+.gif-result{
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    margin-left: 0.5rem;
+}
+
+/* GENERAL */
+a{
+    border-radius: 0.2rem;
+    color: #22577a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0.5rem 0.25rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+a:hover{
+    color: #e0fbfc;
+    background-color: #22577a;
+}
+.active{
+    color: #e0fbfc;
+    background-color: #22577a;
+}
+
